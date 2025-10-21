@@ -5,6 +5,10 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 lerna-debug.log*
+<<<<<<< HEAD
+=======
+.pnpm-debug.log*
+>>>>>>> fc0d357 (Initial commit)
 
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
@@ -56,6 +60,15 @@ web_modules/
 # Optional stylelint cache
 .stylelintcache
 
+<<<<<<< HEAD
+=======
+# Microbundle cache
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+
+>>>>>>> fc0d357 (Initial commit)
 # Optional REPL history
 .node_repl_history
 
@@ -67,8 +80,15 @@ web_modules/
 
 # dotenv environment variable files
 .env
+<<<<<<< HEAD
 .env.*
 !.env.example
+=======
+.env.development.local
+.env.test.local
+.env.production.local
+.env.local
+>>>>>>> fc0d357 (Initial commit)
 
 # parcel-bundler cache (https://parceljs.org/)
 .cache
@@ -95,9 +115,12 @@ dist
 .temp
 .cache
 
+<<<<<<< HEAD
 # Sveltekit cache directory
 .svelte-kit/
 
+=======
+>>>>>>> fc0d357 (Initial commit)
 # vitepress build output
 **/.vitepress/dist
 
@@ -116,15 +139,19 @@ dist
 # DynamoDB Local files
 .dynamodb/
 
+<<<<<<< HEAD
 # Firebase cache directory
 .firebase/
 
+=======
+>>>>>>> fc0d357 (Initial commit)
 # TernJS port file
 .tern-port
 
 # Stores VSCode versions used for testing VSCode extensions
 .vscode-test
 
+<<<<<<< HEAD
 # yarn v3
 .pnp.*
 .yarn/*
@@ -137,3 +164,13 @@ dist
 # Vite logs files
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+=======
+# yarn v2
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
+>>>>>>> fc0d357 (Initial commit)
+
+gcs-service-key.json

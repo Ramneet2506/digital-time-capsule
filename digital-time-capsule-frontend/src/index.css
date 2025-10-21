@@ -1,0 +1,193 @@
+/* src/index.css - Aesthetic Dark Mode Theme */
+
+/* =========================================
+   GLOBAL STYLES & TYPOGRAPHY
+   ========================================= */
+:root {
+    --color-bg-primary: #1e1e1e; /* Dark Charcoal */
+    --color-bg-secondary: #2d2d2d; /* Slightly lighter for cards/forms */
+    --color-text-light: #f0f0f0; /* Soft White */
+    --color-text-muted: #a0a0a0; /* Light Gray for descriptions */
+    --color-accent: #00bcd4; /* Deep Teal/Cyan */
+    --color-danger: #ff5722; /* Vibrant Orange-Red for delete */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-light);
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    color: var(--color-text-light);
+    font-weight: 600;
+}
+hr {
+    border-color: var(--color-bg-secondary);
+    margin: 30px 0;
+}
+a {
+    color: var(--color-accent);
+    text-decoration: none;
+}
+a:hover {
+    color: #4dd0e1; /* Lighter teal on hover */
+}
+
+
+/* =========================================
+   FORMS, CARDS, & CONTAINERS
+   ========================================= */
+
+.login-container, .register-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Card Style for Login, Register, and Dashboard Capsules */
+.login-container > form, .register-container > form, .capsule-card, .edit-form-container, .content-form {
+    background: var(--color-bg-secondary);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); /* Stronger shadow for depth */
+    width: 100%;
+    max-width: 450px; /* Slightly wider forms */
+}
+
+/* Form Fields */
+input[type="text"], input[type="email"], input[type="password"], textarea, input[type="date"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    background-color: #3a3a3a; /* Darker field input */
+    color: var(--color-text-light);
+    border: 1px solid #555;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+textarea {
+    resize: vertical;
+}
+
+
+/* =========================================
+   BUTTONS
+   ========================================= */
+
+.btn-primary, .btn-secondary, .btn-danger, .btn-upload {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.2s, transform 0.1s;
+    margin-right: 10px;
+}
+.btn-primary:active, .btn-secondary:active, .btn-danger:active, .btn-upload:active {
+    transform: translateY(1px);
+}
+
+.btn-primary {
+    background-color: var(--color-accent);
+    color: var(--color-bg-primary); /* Dark text on bright button */
+}
+.btn-primary:hover {
+    background-color: #00e5ff;
+}
+
+.btn-secondary {
+    background-color: #555;
+    color: var(--color-text-light);
+}
+.btn-secondary:hover {
+    background-color: #666;
+}
+
+.btn-danger {
+    background-color: var(--color-danger);
+    color: white;
+}
+.btn-danger:hover {
+    background-color: #e64a19;
+}
+
+
+/* =========================================
+   DASHBOARD & DETAIL PAGE
+   ========================================= */
+
+.dashboard-container {
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.dashboard-container header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #444;
+}
+
+.capsule-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+}
+.capsule-card {
+    text-decoration: none;
+    color: var(--color-text-light);
+    border: 1px solid #444;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: none;
+}
+.capsule-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+.capsule-card h3 {
+    color: var(--color-accent);
+    margin-top: 0;
+}
+.capsule-card p {
+    color: var(--color-text-muted);
+}
+
+/* Detail Page Specifics */
+.lock-status {
+    padding: 15px;
+    border-radius: 8px;
+    margin: 20px 0;
+    font-weight: bold;
+    text-align: center;
+}
+.lock-status.locked {
+    background-color: #333;
+    border: 1px solid var(--color-accent);
+    color: var(--color-accent);
+}
+.lock-status.unlocked {
+    background-color: #1a5e1a; /* Dark Green */
+    color: #c8e6c9;
+}
+
+.sentiment-summary {
+    background-color: #3a3a3a;
+    padding: 15px;
+    border-left: 5px solid var(--color-accent);
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+.sentiment-summary h3 {
+    color: var(--color-text-light);
+}
