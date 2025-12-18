@@ -37,14 +37,6 @@ This project is maintained as a **single repository** containing both the **fron
 
 ## 📁 Project Structure
 
-digital-time-capsule/
-│
-├── digital-time-capsule-frontend/ # Frontend (React)
-├── digital-time-capsule-backend/ # Backend (Node + Express)
-│
-├── .gitignore
-├── LICENSE
-└── README.md
 
 
 ---
@@ -82,17 +74,20 @@ digital-time-capsule/
 
 ---
 
-## 🖥️ Backend Setup
+## 🖥️ Backend Setup & 🌐 Frontend Setup
 
 ```bash
+# =========================
+# BACKEND SETUP
+# =========================
+
 # Go to backend folder
 cd digital-time-capsule-backend
 
 # Install dependencies
 npm install
 
-# Create environment file
-# Create a .env file in this folder and add:
+# Create environment file (.env) with the following variables:
 # DATABASE_URL=postgresql://USER:PASSWORD@HOST:5432/DBNAME
 # JWT_SECRET=your_super_secret_key
 # AWS_BUCKET_NAME=your-bucket-name
@@ -106,18 +101,18 @@ psql -d DBNAME -f schema.sql
 # Start backend server
 npm run dev
 
----
 
-## 🌐 Frontend Setup
+# =========================
+# FRONTEND SETUP
+# =========================
 
-```bash
 # Go to frontend folder
-cd digital-time-capsule-frontend
+cd ../digital-time-capsule-frontend
 
 # Install dependencies
 npm install
 
-# Update backend API URL
+# Configure backend API URL
 # Open: src/context/authcontext.jsx
 # Set:
 # const API_BASE_URL = "http://localhost:5000/api";
