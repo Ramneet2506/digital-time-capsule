@@ -78,7 +78,7 @@ digital-time-capsule/
 
 
 ---
-
+```markdown
 ## ⚙️ Prerequisites
 
 - Node.js (v18+)
@@ -111,7 +111,7 @@ digital-time-capsule/
    - Secret Access Key
 
 ---
-
+```markdown
 ## 🖥️ Setup
 
 ```bash
