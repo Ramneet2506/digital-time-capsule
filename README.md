@@ -29,9 +29,8 @@ This project is maintained as a **single repository** containing both the **fron
 - JWT Authentication
 - Bcrypt Password Hashing
 
-### Storage & AI
+### Storage 
 - AWS S3 (Media Storage)
-- Sentiment Analysis Service
 
 ---
 ## ⚙️ Prerequisites
